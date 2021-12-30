@@ -116,31 +116,74 @@ const newArrFunc = (arr) => {
 }
 
 console.log('newArr', newArrFunc(arr4));
-asdasdaa()
-function asdasdaa() {
-	console.log('===>1121212', 1121212);
-}
-
-asdasd()
-
-const asdasd = function() {
-	console.log('===>55555555', 55555555);
-}
-
-hjshdaj()
-
-const hjshdaj = () => console.log('===>333333', 333333);
+// asdasdaa()
+// function asdasdaa() {
+// 	console.log('===>1121212', 1121212);
+// }
+//
+//  asdasd()
+//
+// const asdasd = function() {
+// 	console.log('===>55555555', 55555555);
+// }
+//
+// hjshdaj()
+//
+// const hjshdaj = () => console.log('===>333333', 333333);
 
 
 
 //сумма всех чисел массива
 
-const a = [1, [2, [3]], 4, [5, '9']];
-let b = a.toString().split(',');
+const a1 = [1, [2, [3]], 4, [5, '9']];
+let b1 = a1.toString().split(',');
 
 let sum = 0;
-for(let i = 0; i < b.length; i++){
-	sum += b[i];
+
+//reduce
+for(let i = 0; i < b1.length; i++){
+	sum += Number(b1[i]);
 }
 
-console.log(sum)
+// console.log('===>sum', sum);
+
+
+
+const a2 = [1, [2, [3]], 4, [5, '9']];
+
+const b2 = a1.toString().split(',');
+
+const sum2 = b2.reduce(function (a,b){
+	return +a +(+b)
+})
+// console.log('===>sum2',sum2)
+
+
+//удалить дубликаты из списка
+
+function distinct(a){
+	const items = {};
+	const res = [];
+
+	for(let i = 0; i< a.length; i++){
+
+		//если текущего элемента нет внутри объекта
+		if(items[a[i]]) res.push(a[i]);
+	}
+	return
+}
+
+https://www.youtube.com/watch?v=G159ypijakg
+
+
+
+
+
+
+
+
+
+
+
+
+
